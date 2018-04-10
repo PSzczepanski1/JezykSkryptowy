@@ -1,0 +1,30 @@
+from array import *
+####################### ZADANIE 2
+tablica = array('u',[])
+ile=int(input("Ile znaków chcesz wpisać?"))
+i=0
+x=0
+while i <ile:
+    print("Podaj znak:")
+    x = input()
+    tablica.append(x)
+    i+=1
+print(tablica)
+print("wypisuje elementy tablicy w odwrotnej kolejności:")
+tablica.reverse()
+for i in tablica:
+    print(i)
+
+    
+###################### ZADANIE 3
+import random
+print("Losowanie liczb:")
+tablica = array('f',[])
+file = open("result.txt", "w")
+i = 0
+while i<10:
+    x= random.uniform(-5,5)
+    tablica.append(x)
+    i+=1
+file.write(str(tablica))
+file.close()
